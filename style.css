@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Poppins:wght@300&family=Ubuntu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    background-color: #fff;
+    color: #b9ee28;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
+    position: fixed;
+    z-index: 999;
+}
+.cursor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d7f87e;
+    position: fixed;
+    z-index: 3;
+}
+.cursor-blur{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #d8f87eab;
+    position: fixed;
+    z-index: 1;
+    filter: blur(100px);
+    transform: translate(-50%, -50%);
+}
+.logo{
+    height: 65px;
+}
+.logo img{
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin: 0 30px;
+}
+ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+.main{
+    background-color: #11111181;
+    position: relative;
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+}
+.page1 h1{
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+.page1 h1::before{
+    content: "PLAY BEYOND REALITY.";
+    position: absolute;
+    color: #111;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 1px #95c11e;
+    z-index: -1;
+}
+
+.page1 h3{
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+.page1 p{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    width: 45%;
+    text-align: center;
+    z-index: 2;
+}
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+}
+.scroller{
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+    overflow-y: hidden;
+    overflow-x: auto;
+    cursor: default;
+}
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 40s linear infinite;
+}
+.scroller-in h4{
+    display: inline-block;
+    font-family: 'Archivo Black', sans-serif;
+    color: #000000;
+    font-weight: bold;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #fff;
+}
+.scroller-in h4:hover{
+    color: #95c11e;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.about-sec{
+z-index: 10;
+display: flex;
+justify-content: center;
+margin-top: 100px;
+padding: 5px 40px;
+}
+.img1{
+width: 20%;
+align-self: self-start;
+z-index: 2;
+}
+.img1 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.img2{
+width: 15%;
+align-self: flex-end;
+z-index: 2;
+}
+.img2 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.about{
+    width: 65%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+.about h2{
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.about p{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    width: 90%;
+    text-align: center;
+    line-height: 25px;
+}
+
+.card-container{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 100px;
+    position: relative;
+}
+.card{
+    width: 25%;
+    height: 90%;
+    background-color: red;
+    border-radius: 20px;
+    background-position: center;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+.card h1{
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    white-space: nowrap;
+    padding: 15px;
+}
+#card1{
+    background: url('https://www.recorder.com/getattachment/7852179f-8e8e-42b9-a950-293c7597f188/Copy-Of-spt-WomensAmDay2-HG-81722-ph02');
+    background-size: cover;
+    background-position: center;
+}
+#card2{
+    background: url('https://img.freepik.com/premium-photo/golf-course-landscape-golf-field-background-with-pond-sunny-day_691560-6640.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#card3{
+    background: url('https://golf.com/wp-content/uploads/2022/11/Club-Car-Cru.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.overlay{
+    position: absolute;
+    background-color: #95c11e;
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay h2{
+    font-family: 'Archivo Black', sans-serif;
+    color: #000000;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.overlay p{
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    line-height: 30px;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.arrow-b{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    position: relative;
+    align-self: flex-end;
+}
+.arrow{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.arrow-b:hover{
+    background-color: #fff;
+}
+
+.arrow-b:hover .arrow{
+    color: #9ccf10;
+}
+.greendiv{
+    background: linear-gradient(to left bottom, #33c010, #b9ee28);
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.greendiv h2{
+    font-family: 'Archivo Black', sans-serif;
+    color: #000000;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    width: 50%;
+    text-align: center;
+    z-index: 2;
+}
+.page3{
+    min-height: 90vh;
+    width: 100%;
+}
+.greendiv img{
+    width: 10%;
+    height:100%;
+    object-fit: cover;
+    z-index: 2;
+}
+.food-container{
+    width: 100%;
+    height: 500px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.food-container img{
+    width: 45%;
+    border-radius: 20px;
+    object-fit: cover;
+    z-index: 2;
+}
+.food-container .food-details{
+    width: 40%;
+    position: relative;
+    z-index: 2;
+}
+.food-container h1{
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    padding: 5px 0; 
+}
+.food-container p{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    width: 100%;
+    text-align: left;
+    padding: 15px 0;
+}
+.food-container button{
+    margin-top: 20px;
+    border: 2px solid #95c11e;
+    background-color: black;
+    padding: 10px 25px;
+    border-radius: 100px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+button:hover{
+    background-color: #95c11e;
+    color: #111;
+    font-weight: bold;
+}
+.testimonial-container{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 70px;
+    position: relative;
+    z-index: 2;
+}
+.testimonial-container img{
+    width: 50px;
+}
+.testimonial-container .colon1{
+    align-self: flex-start;
+}
+.testimonial-container .colon2{
+    align-self: flex-end;
+}
+.testimonial-container p{
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    width: 60%;
+    text-align: center;
+    position: relative;
+}
+.small-card-con{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+.small-cards{
+    width: 26%;
+    height: 140px;
+    background-color: #acdf23;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.small-cards h2{
+    font-family: 'Archivo Black', sans-serif;
+    color: #000000;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    transition: all 0.7s ease-in-out;
+}
+.small-cards:hover h2{
+    color: #fff;
+}
+#small-1:hover{
+    background: url('https://i.nextmedia.com.au/Features/maclaren.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#small-2:hover{
+    background: url('https://static.vecteezy.com/system/resources/previews/008/112/047/large_2x/aerial-view-drone-shot-of-beautiful-green-golf-field-fairway-and-putting-green-top-down-image-for-sport-background-and-travel-nature-background-amazing-view-photo.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#small-3:hover{
+    background: url('https://media.istockphoto.com/id/1360743633/photo/group-of-asian-senior-man-driving-golf-cart-on-golf-course-in-summer-sunny-day.jpg?s=612x612&w=0&k=20&c=5lmaIlpPgjd86AGSkJEEZuhNwaMMSQeeaqes205ktbg=');
+    background-position: center;
+    background-size: cover;
+}
+footer{
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to left bottom, #33c010, #b9ee28);
+    font-family: 'Archivo Black', sans-serif;
+    color: #000000;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+.f-d-1{
+    display: flex;
+    height: 70%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 40px;
+    gap: 10px;
+}
+.footer-l{
+    width: 20%;
+    z-index: 2;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.footicons i{
+   font-size: 2rem;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+.footicons i:hover{
+   color: #fff;
+}
+.footer-l img{
+    width: 50%;
+    cursor: pointer;
+}
+.menu{
+    width: 25%;
+    position: relative;
+    z-index: 2;
+}
+.menu h2{
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.menu3{
+    width: 20%;
+    position: relative;
+    z-index: 2;
+    line-height: 25px;
+}
+.menu3 h2{
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.menu3 p{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.menu h2:hover, .menu3 h2:hover{
+    color: #fff;
+}
+.f-d-2{
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    font-size: 0.7rem;
+    transition: all 0.2s ease;
+    padding: 20px 80px;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    justify-content: space-between;
+}
+.footlink:hover{
+    color: #fff;
+    cursor: pointer;
+}
